@@ -29,9 +29,7 @@ public class SessionServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 세션에서 사용자정보가 들어있지 않으면 (null 이면) login.jsp로 포워딩
-		// 사용자정보가 들어있다면 sessionInfo.jsp로 포워딩
-		// sessionInfo.jsp에서는 id, name, nickname을 출력
+	
 		if(request.getSession().getAttribute("user") == null) {
 			response.sendRedirect("jsp/login.jsp");
 		} else {

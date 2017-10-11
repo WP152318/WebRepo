@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// login.jsp로 포워딩
+	
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 		rd.forward(request, response);
 	}
@@ -49,17 +49,15 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		String pwd = request.getParameter("pwd");
 		System.out.printf("id : %s, pwd : %s \n", id, pwd);
 		
-		// id, pwd 정합성 체크
 		boolean result = true;
 		
 		if(result) {
-			// 세션에 사용자 정보 생성해서 담기
 			HttpSession session = request.getSession();
 			
 			UserVO user = new UserVO();
 			user.setId(id);
-			user.setName("홍길동");
-			user.setNickname("의적");
+			user.setName("world");
+			user.setNickname("hello");
 			
 			session.setAttribute("user", user);
 			

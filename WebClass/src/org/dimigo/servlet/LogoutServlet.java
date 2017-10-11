@@ -37,7 +37,7 @@ public class LogoutServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 세션에 담긴 사용자 정보를 삭제
+
 		HttpSession session = request.getSession();
 //		session.removeAttribute("user");
 		session.invalidate();

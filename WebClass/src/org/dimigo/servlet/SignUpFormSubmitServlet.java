@@ -46,7 +46,7 @@ public class SignUpFormSubmitServlet extends HttpServlet {
       String nickname = request.getParameter("nickname");
       System.out.printf("email : %s, name: %s, nickname: %s\n", id, name, nickname);
       
-      // id, pwd 정합성 체크
+ 
       boolean result = false;
       
       if(result) {

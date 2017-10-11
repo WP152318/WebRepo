@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/org/dimigo/servlet/HelloServlet.java=UTF-8
+encoding//src/org/dimigo/servlet/LoginServlet.java=UTF-8
+encoding//src/org/dimigo/servlet/LogoutServlet.java=UTF-8
+encoding//src/org/dimigo/servlet/SessionServlet.java=UTF-8
+encoding//src/org/dimigo/servlet/SignUpFormSubmitServlet.java=UTF-8
+encoding//src/org/dimigo/servlet/SignUpServlet.java=UTF-8
