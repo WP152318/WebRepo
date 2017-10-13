@@ -46,7 +46,7 @@
 			<% }else{ %>
 				<form class="form-inline my-2 my-lg-0" method="post" action="/WebClass/bloglogout">
 				<a class="nav-item nav-link" href="#" id="bd-versions">
-	    			홍길동님
+	    			오세은 님
 	      		</a>
 				<div class="menuButton">
 					<button type="submit" class="btn btn-outline-success my-2 my-sm-0">Logout</button>
