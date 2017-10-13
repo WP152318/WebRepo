@@ -9,15 +9,20 @@ $(document).ready(function() {
 		var pwd = $('#pwd').val();
 
 		// 서버로 post 방식으로 전송
-		$.post("http://httpbin.org/post", {
+		$.post("/WebClass/bloglogin", {
 			id : id,
 			pwd : pwd
 		}, function(data) {
 			// alert(data.form.id + "님 로그인되었습니다.");
-			var myModal = $('#myModal');
-			$('#loginModal').modal('hide');
-			myModal.modal();
-			myModal.find('.modal-body').text(data.form.id + "님 로그인되었습니다.");
+			if(data.msg=="error"){
+				var myModal = $('#myModal');
+				$('#loginModal').modal('hide');
+				myModal.modal();
+				myModal.find('.modal-body').text("로그인에 실패하였습니다.");
+				$('#pwd').val("");
+			}else{
+				location.reload();
+			}
 		});
 	});
 });
