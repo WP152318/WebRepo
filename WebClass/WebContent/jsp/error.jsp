@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="org.dimigo.vo.UserVO" %>
+<%@ page isErrorPage="true" %>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	UserVO vo = (UserVO) session.getAttribute("user");
-%>
-<h1>id : ${ user.id }</h1>
-<h1>name : ${ user.name }</h1>
-<h1>nickname : ${ user.nickname }</h1>
+<h1>Exception : <%= exception.getClass().getName() %></h1>
+<h1>Message : <%= exception.getMessage() %></h1>
 </body>
 </html>
