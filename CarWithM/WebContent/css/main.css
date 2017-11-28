@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.interested, .wish {
+	margin: 30px;
+}
+
+.card-group {
+	margin-top: 20px;
+}
+
+.menuButton {
+	margin-right: 10px;
+}
+
+.class {
+	margin-top: 10px;
+}
+
+.name, .number {
+	margin-top: 20px;
+}
+
+.signUp, .login {
+	align: right;
+	margin: 10px;
+}
