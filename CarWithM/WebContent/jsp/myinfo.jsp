@@ -41,11 +41,11 @@
 </nav>
 <div class="container">
 <br>
-<h1>이름 : ${ item.name }</h1>
+<h1>이름 : ${ sessionScope.user.name }</h1>
 <br>
-<h1>별명 : ${ item.nickname }</h1>
+<h1>별명 : ${ sessionScope.user.nickname }</h1>
 <br>
-<h1>이메일 : ${ item.id }</h1>
+<h1>이메일 : ${ sessionScope.user.id }</h1>
 </div>
 
 <%@ include file="footer.jsp" %>

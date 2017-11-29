@@ -27,12 +27,22 @@
       </c:if>
       <c:if test="${ !empty user }">
       <li class="nav-item" onmouseover="menu_over(this)" onmouseout="menu_out(this)">
-        <a class="nav-link" href="${ contextPath }/jsp/mylist.jsp">내 글</a>
+        <a class="nav-link" href="${ contextPath }/jsp/searchList.jsp">게시물 검색</a>
       </li>
       </c:if>
       <c:if test="${ empty user }">
       <li class="nav-item" onmouseover="menu_over(this)" onmouseout="menu_out(this)">
-        <a class="nav-link" href="${ contextPath }/login.do">내 글</a>
+        <a class="nav-link" href="${ contextPath }/login.do">게시물 검색</a>
+      </li>
+      </c:if>
+      <c:if test="${ !empty user }">
+      <li class="nav-item" onmouseover="menu_over(this)" onmouseout="menu_out(this)">
+        <a class="nav-link" href="${ contextPath }/jsp/map.jsp">주변에는</a>
+      </li>
+      </c:if>
+      <c:if test="${ empty user }">
+      <li class="nav-item" onmouseover="menu_over(this)" onmouseout="menu_out(this)">
+        <a class="nav-link" href="${ contextPath }/login.do">주변에는</a>
       </li>
       </c:if>
       <c:if test="${ !empty user }">

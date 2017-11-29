@@ -10,7 +10,7 @@ public class ListService extends AbstractService {
 	
 
 	
-	public List<ListVO> list() throws Exception {
+	public List<ListVO> searchUserList() throws Exception {
 		
 		Connection conn = null;
 		
@@ -18,7 +18,7 @@ public class ListService extends AbstractService {
 			conn = getConnection();
 			
 			ListDao dao = new ListDao(conn);
-			return dao.search();
+			return dao.searchUserList();
 			
 		} finally {
 			if(conn != null) conn.close();
@@ -39,6 +39,21 @@ public class ListService extends AbstractService {
 			if(conn != null) conn.close();
 		}
 		
+	}
+	
+public List<ListVO> searchList(String dest) throws Exception {
+		
+		Connection conn = null;
+		
+		try {
+			conn = getConnection();
+			
+			ListDao dao = new ListDao(conn);
+			return dao.search(dest);
+			
+		} finally {
+			if(conn != null) conn.close();
+		}
 	}
 	
 	

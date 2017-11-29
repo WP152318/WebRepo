@@ -14,7 +14,7 @@ public class ListAction implements IAction {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		// Service 호축
+		// Service 호출
 		UserService service = new UserService();
 		List<UserVO> list = service.searchUserList();
 		

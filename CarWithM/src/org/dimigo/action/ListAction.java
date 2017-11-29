@@ -16,7 +16,7 @@ public class ListAction implements IAction {
 			
 		// Service 추가
 		ListService service = new ListService();
-		List<ListVO> list = service.list();
+		List<ListVO> list = service.searchUserList();
 		
 		for (ListVO item : list) {
 			System.out.println(item);

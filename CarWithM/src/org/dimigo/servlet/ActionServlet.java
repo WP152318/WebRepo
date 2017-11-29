@@ -16,6 +16,7 @@ import org.dimigo.action.ListAction;
 import org.dimigo.action.LoginAction;
 import org.dimigo.action.LogoutAction;
 import org.dimigo.action.RegistrationAction;
+import org.dimigo.action.SearchListAction;
 import org.dimigo.action.SessionAction;
 import org.dimigo.action.SignUpAction;
 
@@ -43,6 +44,7 @@ public class ActionServlet extends HttpServlet {
     	actions.put("registration", new RegistrationAction());
     	actions.put("signup", new SignUpAction());
     	actions.put("list", new ListAction());
+    	actions.put("searchList", new SearchListAction());
     }
 
 	/**

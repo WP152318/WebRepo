@@ -49,7 +49,43 @@ public class ListDao {
 		}
 	}
 	
-	public List<ListVO> search() throws Exception {
+	public List<ListVO> search(String dest) throws Exception {
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+	
+		String sql = "SELECT * FROM LIST WHERE DESTINATION=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dest);
+			rs = pstmt.executeQuery();
+			
+			ListVO result = null;
+			List<ListVO> list = new ArrayList<>();
+			
+			while(rs.next()) {
+				result = new ListVO();
+				result.setTitle(rs.getString(1));
+				result.setText(rs.getString(2));
+				result.setDate(rs.getString(3));
+				result.setDestination(rs.getString(4));
+				list.add(result);
+			}
+			
+			return list;
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw new Exception("데이터베이스 연결에 실패하였습니다.");
+		} finally {
+			if(rs != null) rs.close();
+			if(pstmt != null) pstmt.close();
+		}
+	}
+
+	
+public List<ListVO> searchUserList() throws Exception {
 		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -83,7 +119,7 @@ public class ListDao {
 			if(pstmt != null) pstmt.close();
 		}
 	}
-
+	
 	public void insertList(ListVO vo) throws Exception {
 		
 		PreparedStatement pstmt = null;
